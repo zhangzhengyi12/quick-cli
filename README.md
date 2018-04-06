@@ -4,6 +4,7 @@
 <img src="https://img.shields.io/badge/npm-5.51-green.svg"></img>
 <img src="https://img.shields.io/badge/node-v8.9.3-blue.svg"/>
 <img src="https://img.shields.io/badge/Power%20By-gulp-red.svg"/>
+<img src="https://img.shields.io/apm/l/vim-mode.svg" />
 </p>
 
 前端开发环境的脚手架工具，Gulp + express。
@@ -62,13 +63,17 @@ OR use cnpm
 
 简单移动
 
+### global ###
+
+请将所有全局引用的资源，如mainfest,网站图标等引入global文件夹中。
+
 ### 自动刷新 ###
 
 默认带有自动监听文件>编译>刷新功能，默认监听js,html,css,如需要监听图片字体等，请修改`  taks/browser.js `
 
 ### 引用库 ###
 
-请添加到`src/static/vendor/`目录下，为了更好的扩展，不做压缩合并等功能，仅仅是移动
+添加到`src/static/vendor/`目录下，为了更好的扩展，不做压缩合并等功能，仅仅是移动
 
 
 如果它帮助到了你，请给个`star`，如果有任何bug 请提出`issues`
