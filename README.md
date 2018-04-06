@@ -1,15 +1,34 @@
-## QUICK CLI ##
+# QUICK CLI #
 
-这是一个前端开发环境的脚手架工具，主要使用Gulp + express
+<p>
+<img src="https://img.shields.io/badge/npm-5.51-green.svg"></img>
+<img src="https://img.shields.io/badge/node-v8.9.3-blue.svg"/>
+<img src="
+https://img.shields.io/badge/Power%20By-gulp-red.svg"/>
+</p>
 
-其对应的目标是，小型，多页，小团队，纯静态页面的开发，
+前端开发环境的脚手架工具，Gulp + express。
 
-以下是他的目标功能
+其对应的目标项目类型：小型，多页，小团队，纯静态页面的开发。希望可以提升你的开发效率
 
-- 开发模式下自动监听并刷新浏览器
-- 使用stylus为预编译语言，让后续更新变得更方便
-- 添加Include来减轻负担
-- build模式下自动postcss 添加前缀，
-- 只要build模式进行CSS和JS的压缩
-- 增加了HTML功能，可以HTML中导入一些模块
+## Usage ##
+
+### STEP 1 ###
+
+> git clone git@github.com:zhangzhengyi12/quick-cli.git
+
+### STEP 2 ###
+
+> cd quick-cli
+
+> npm run init
+
+OR use cnpm 
+
+> npm run cinit
+
+### STEP 3 ###
+
+> npm run dev
+
 

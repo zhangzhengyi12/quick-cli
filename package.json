@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
-    "dev": "gulp --watch"
+    "dev": "gulp --watch",
+    "init": "npm i && cd server & npm i",
+    "cinit": "cnpm i && cd server & cnpm i"
   },
   "author": "",
   "license": "ISC",
