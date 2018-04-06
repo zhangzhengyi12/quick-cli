@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
-    "babel-core": "^6.25.0",
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.2",
@@ -27,6 +27,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-live-server": "0.0.30",
