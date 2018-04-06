@@ -3,8 +3,6 @@ import gulpif from 'gulp-if'
 import livereload from 'gulp-livereload'
 import args from './util/args'
 import concat from 'gulp-concat'
-import minCss from 'gulp-minify-css'
-import plumber from 'gulp-plumber'
 
 //实现css的合并 与压缩
 gulp.task('vendorCSS', () => {
