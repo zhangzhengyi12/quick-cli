@@ -44,7 +44,15 @@ OR use cnpm
 
 ###  include ###
 
-允许将一些文件片段放置到include目录下，比如HTML的某个头部模块，方便在各个页面中引用。遵循DRY原则，方便后续的更改
+允许将一些文件片段放置到include目录下，比如HTML的某个头部模块，方便在各个页面中引用。遵循DRY原则，方便后续的更改 TIPS: 如果使用if语句来自动增加active样式，请将if语句放置在默认样式前
+
+```html
+
+<li @@if(true){class="active item"} class="item">
+      <a href="/">HOME</a>
+    </li>
+
+```
 
 ### stylus ###
 
@@ -77,3 +85,17 @@ OR use cnpm
 
 
 如果它帮助到了你，请给个`star`，如果有任何bug 请提出`issues`
+
+
+### TODO ###
+
+增加对于vendor里fonts的支持，对js不做合并，对fileinclude做错误处理
+
+应该对绝大部分任务做错误处理，否则中断的体验会很差！
+
+
+## CHANGE LOG ##
+
+v1.1.0 
+
+修复了fileinclude的错误处理，关闭了JS的自动合并，改为单纯转移，方便灵活调用，并对vendor/fonts做了支持。

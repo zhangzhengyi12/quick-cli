@@ -1,6 +1,6 @@
 {
   "name": "quick-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "这是一个前端开发环境的脚手架工具，主要使用Gulp + express",
   "main": "index.js",
   "scripts": {

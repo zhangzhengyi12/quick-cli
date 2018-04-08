@@ -20,3 +20,8 @@ gulp.task('vendorScript',()=>{
     .pipe(gulp.dest('server/static/vendor/js'))
     .pipe(gulpif(args.watch, livereload()))
 })
+
+gulp.task('vendorFonts',()=>{
+  return gulp.src('src/static/vendor/fonts/*.*')
+    .pipe(gulp.dest('server/static/vendor/fonts'))
+})

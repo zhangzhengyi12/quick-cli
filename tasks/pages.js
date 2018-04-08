@@ -4,6 +4,7 @@ import livereload from 'gulp-livereload'
 import args from './util/args'
 import path from 'path'
 import fileinclude from 'gulp-file-include'
+import plumber from 'gulp-plumber'
 
 function respath(dir) {
   return path.join(__dirname, './', dir)
@@ -12,6 +13,13 @@ function respath(dir) {
 gulp.task('pages', () => {
   return gulp
     .src('src/pages/*.html')
+    .pipe(
+      plumber({
+        errorHandle: function(err) {
+          console.log(err)
+        }
+      })
+    )
     .pipe(
       fileinclude({
         prefix: '@@',
