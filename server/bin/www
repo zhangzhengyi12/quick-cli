@@ -8,6 +8,7 @@ var app = require('../app')
 var debug = require('debug')('server:server')
 var http = require('http')
 var chalk = require('chalk')
+var open = require('open')
 /**
  * Get port from environment and store in Express.
  */
@@ -90,17 +91,18 @@ for (var dev in ifaces) {
   })
 }
 
-
 function onListening() {
   var addr = server.address()
   var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
   debug('Listening on ' + bind)
+  var localAdress = `http://localhost:${addr.port}`
   console.log(
     chalk.magenta(`
   服务器已经成功开启
   --------------------------------------------------------
-       Local:  http://localhost:${addr.port}
+       ${localAdress}
   --------------------------------------------------------
   `)
   )
+  open(localAdress)
 }
