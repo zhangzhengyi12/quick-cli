@@ -1,6 +1,6 @@
 {
   "name": "quick-cli",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "这是一个前端开发环境的脚手架工具，主要使用Gulp + express",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.0.1",
+    "gulp-html-beautify": "^1.0.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-live-server": "0.0.30",

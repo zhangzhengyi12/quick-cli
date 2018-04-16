@@ -111,3 +111,13 @@ v1.1.2
 v1.1.3
 
 增加自动文件时间戳的功能，主要编写在pages.js上
+
+TIPS 需要手动在需要开启时间戳的引入路径末尾加上
+
+```html
+<link rel="stylesheet" href="/static/css/main.min.css?rev=@@hash">
+```
+
+v1.1.3
+
+增加HTML自动格式化，以便后台查看抽离

@@ -6,6 +6,7 @@ import path from 'path'
 import fileinclude from 'gulp-file-include'
 import plumber from 'gulp-plumber'
 import rev from './util/rev'
+import htmlbeautify from 'gulp-html-beautify'
 
 function respath(dir) {
   return path.join(__dirname, './', dir)
@@ -28,6 +29,15 @@ gulp.task('pages', () => {
       })
     )
     .pipe(rev())
+    .pipe(
+      gulpif(
+        !args.watch,
+        htmlbeautify({
+          indent_size: 4,
+          indent_char: ' '
+        })
+      )
+    )
     .pipe(gulp.dest('server/views'))
     .pipe(gulpif(args.watch, livereload()))
 })
