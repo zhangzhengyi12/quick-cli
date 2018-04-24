@@ -5,6 +5,7 @@ import args from './util/args'
 import path from 'path'
 import fileinclude from 'gulp-file-include'
 import plumber from 'gulp-plumber'
+import ejs from 'gulp-ejs'
 import rev from './util/rev'
 import htmlbeautify from 'gulp-html-beautify'
 
@@ -14,7 +15,7 @@ function respath(dir) {
 
 gulp.task('pages', () => {
   return gulp
-    .src('src/pages/*.html')
+    .src('src/pages/*.ejs')
     .pipe(
       plumber({
         errorHandle: function(err) {
@@ -22,12 +23,7 @@ gulp.task('pages', () => {
         }
       })
     )
-    .pipe(
-      fileinclude({
-        prefix: '@@',
-        basepath: respath('../src/include/')
-      })
-    )
+    .pipe(ejs())
     .pipe(rev())
     .pipe(
       gulpif(
