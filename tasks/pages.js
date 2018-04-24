@@ -23,7 +23,7 @@ gulp.task('pages', () => {
         }
       })
     )
-    .pipe(ejs())
+    .pipe(ejs({ msg: 'Hello Gulp!'}, {}, { ext: '.html' }))
     .pipe(rev())
     .pipe(
       gulpif(
