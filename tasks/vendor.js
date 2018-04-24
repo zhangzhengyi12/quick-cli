@@ -16,7 +16,6 @@ gulp.task('vendorCSS', () => {
 gulp.task('vendorScript',()=>{
   return gulp
     .src('src/static/vendor/js/*.js')
-    .pipe(concat('vendor.main.js'))
     .pipe(gulp.dest('server/static/vendor/js'))
     .pipe(gulpif(args.watch, livereload()))
 })
