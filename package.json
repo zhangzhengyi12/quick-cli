@@ -1,7 +1,7 @@
 {
   "name": "quick-cli",
   "version": "1.2.1",
-  "description": "这是一个前端开发环境的脚手架工具，主要使用Gulp + express",
+  "description": "这是一个前端开发环境的脚手架工具，主要使用Gulp + express + EJS ,能够通过Json文件配置渲染数据",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
