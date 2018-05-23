@@ -79,6 +79,12 @@ OR use cnpm
 
 默认带有自动监听文件>编译>刷新功能，默认监听js,html,css,如需要监听图片字体等，请修改`  taks/browser.js `
 
+
+### 开发完成后 ###
+
+> npm run build
+> node server/bin/www
+
 ### 引用库 ###
 
 添加到`src/static/vendor/`目录下，为了更好的扩展，不做压缩合并等功能，仅仅是移动
@@ -126,3 +132,10 @@ v1.2.1
 
 修复了include的引入bug, 增加了全新的读取json数据来为ejs做渲染的功能，请放置json数据于pages/render文件下，与绑定的ejs文件同名。
 
+v1.2.2
+
+修复两个问题
+
+增加包
+
+删除自动开启浏览器
