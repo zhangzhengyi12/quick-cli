@@ -28,7 +28,24 @@ gulp.task('pages', () => {
     )
     .pipe(
       data(function(file) {
-        return JSON.parse(fs.readFileSync('./src/pages/render/' + path.basename(file.path).replace('ejs', 'json')))
+        let jsonStr
+        try {
+          jsonStr = fs.readFileSync(
+            './src/pages/render/' +
+              path.basename(file.path).replace('ejs', 'json'),
+            'utf-8'
+          )
+        } catch (e) {
+          console.warn(
+            '未找到名为' + file.path + '的json文件，请确认是否添加，已忽略'
+          )
+          return '{}'
+        }
+        if (!/^\{[^]*\}$/.test(jsonStr.toString())) {
+          console.warn('请确认JSON格式是否正确')
+          return '{}'
+        }
+        return JSON.parse(jsonStr)
       })
     )
     .pipe(ejs())
@@ -42,9 +59,11 @@ gulp.task('pages', () => {
         })
       )
     )
-    .pipe(rename({
-      extname:'.html'
-    }))
+    .pipe(
+      rename({
+        extname: '.html'
+      })
+    )
     .pipe(gulp.dest('server/views'))
     .pipe(gulpif(args.watch, livereload()))
 })

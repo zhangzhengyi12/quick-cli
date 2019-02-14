@@ -23,9 +23,12 @@
 
 > npm run init
 
+
 OR use cnpm 
 
 > npm run cinit
+
+如果失败，请手动在根目录以及server目录下运行一下npm i 
 
 ### STEP 3 ###
 
@@ -101,6 +104,10 @@ OR use cnpm
 
 
 ## CHANGE LOG ##
+
+v1.1.1
+
+增加JSON配置检测机制，能够对没有建立页面配套JSON或者JSON格式错误做出正确的提醒
 
 v1.1.0 
 
