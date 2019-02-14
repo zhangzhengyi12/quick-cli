@@ -39,15 +39,48 @@ OR use cnpm
 
 ### 起步 ###
 
-本环境利用了gulp(自动化) + experss(服务器)。你可以任意更改，比如将预编译语言stylus修改为less。
+本环境利用了gulp(自动化) + experss(服务器) + ejs(模板引擎)。你可以任意更改，比如将预编译语言stylus修改为less。
 
 ### pages ###
+
 
 所有页面将保存在`src/pages`下，请不要在内部创建二级或多级目录结构，页面中的资源引用将会全部以`/static`起始
 
 ###  include ###
 
-允许将一些文件片段放置到include目录下，比如HTML的某个头部模块，方便在各个页面中引用。遵循DRY原则，方便后续的更改 TIPS: 如果使用if语句来自动增加active样式，请将if语句放置在默认样式前
+由于用了ejs作为模板编译引擎，你能够使用ejs的全部能力
+
+允许将一些文件片段放置到include目录下，比如HTML的某个头部模块，方便在各个页面中引用。遵循DRY原则，方便后续的更改 
+
+```html
+<!-- 某个page.ejs中 同样可以用于引入一些js库 -->
+<% include ../include/header.ejs  %>
+```
+
+具体的动态样式，循环渲染等操作请查看ejs的文档
+
+数据存放在`src/pages/render/xx.json`中，框架会帮你把里面的数据注入到同名文件的ejs页面文件上下文中。
+
+比如创建了一个index.ejs 页面文件
+
+```html
+<body>
+  i m <%= name %>
+</body>
+```
+
+这时候需要在同名的`src/pages/render/index.json`中填入如下内容
+
+```json
+{
+  "name":"index"
+}
+```
+
+最终会把这个东西注入到页面中
+
+
+TIPS: 如果使用if语句来自动增加active样式，请将if语句放置在默认样式前
 
 ```html
 
