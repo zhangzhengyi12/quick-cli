@@ -64,6 +64,6 @@ gulp.task('pages', () => {
         extname: '.html'
       })
     )
-    .pipe(gulp.dest('server/views'))
+    .pipe(gulp.dest('server'))
     .pipe(gulpif(args.watch, livereload()))
 })
